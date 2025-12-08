@@ -1,31 +1,29 @@
 import React from "react";
 
 const ProductCard = ({ image, name, price, description }) => {
-    return (
-        <div className="bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-all overflow-hidden">
-            <img
-                src={image}
-                alt={name}
-                className="w-full h-48 object-cover"
-            />
-            <div className="p-4 flex flex-col gap-2">
-                <h3 className="text-lg font-semibold text-slate-900">{name}</h3>
-                {description && (
-                    <p className="text-sm text-slate-500 line-clamp-2">
-                        {description}
-                    </p>
-                )}
-                <div className="flex items-center justify-between mt-2">
-                    <span className="text-primary font-bold text-base">
-                        {price}
-                    </span>
-                    <button className="text-sm bg-primary text-white px-4 py-1.5 rounded-full hover:opacity-90">
-                        Add to cart
-                    </button>
-                </div>
-            </div>
+  return (
+    <div className="bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-all overflow-hidden">
+      <div
+        className="w-full h-48 sm:h-56 md:h-64 lg:h-72 bg-gray-100 bg-center bg-cover"
+        style={{ backgroundImage: `url(${image})` }}
+      ></div>
+
+      <div className="p-4 flex flex-col gap-2">
+        <h3 className="text-lg font-semibold text-slate-900">{name}</h3>
+
+        {description && (
+          <p className="text-sm text-slate-500 line-clamp-2">{description}</p>
+        )}
+
+        <div className="flex items-center justify-between mt-2">
+          <span className="text-primary font-bold text-base">{price}</span>
+          <button className="text-sm bg-primary text-white px-4 py-1.5 rounded-full hover:opacity-90">
+            Add to cart
+          </button>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default ProductCard;
