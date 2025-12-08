@@ -11,7 +11,7 @@ const ShopHero = () => {
 
       <div className="relative h-full max-w-6xl mx-auto px-6 flex flex-col justify-center">
         <h1 className="text-white text-3xl sm:text-4xl md:text-6xl font-bold max-w-2xl drop-shadow-lg leading-tight">
-          Elevate Your Style.    yazan
+          Elevate Your Style.
         </h1>
 
         <p className="text-white/90 mt-3 text-sm sm:text-base md:text-lg max-w-md drop-shadow-md">
